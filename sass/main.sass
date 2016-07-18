@@ -1,0 +1,125 @@
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%))
+  ::-webkit-scrollbar
+      width:  $size
+      height: $size
+
+
+  ::-webkit-scrollbar-thumb
+      background: $foreground-color
+
+
+  ::-webkit-scrollbar-track
+      background: $background-color
+
+
+  // For Internet Explorer
+  body
+    scrollbar-face-color: $foreground-color
+    scrollbar-track-color: $background-color
+
+
+
+@include scrollbars(.01em, slategray)
+
+$gitwit-green: #79eb69
+$gitwit-newspaper: #eee
+
+
+body
+  background: $gitwit-newspaper
+  h1
+    font-family: 'Montserrat', sans-serif
+  nav
+    height: 75px
+    background: $gitwit-newspaper
+    width: 100%
+    border-bottom: 2px solid #444
+    img
+      width: 50px
+      float: left
+      margin: 10px
+    ul
+      height: 100%
+      display: flex
+      list-style: none
+      align-items: center
+      justify-content: flex-end
+    li
+      color: black
+      font-family: 'Montserrat', sans-serif
+      margin: 0 10px
+
+      &:hover
+        color: $gitwit-green
+        transition: ease-in-out .15s
+        transform: translateY(5px)
+    a
+      text-decoration: none !important
+
+
+
+
+//Landing page styles
+.slider-container
+  margin-top: 75px
+  .slider
+    background: $gitwit-green
+    height: 35vh
+    overflow: hidden
+    overflow-y: scroll
+    border-radius: 25px
+    div
+      padding: 25px
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+    h3
+      font-family: 'Montserrat', sans-serif
+      font-size: 22px
+    img
+      width: 100%
+
+
+
+//Process Page Styles
+.processes
+  height: 33vh
+  margin-top: 15px
+  div
+    height: 100%
+    .inner-content
+      border-top: 2px solid black
+      display: flex
+      flex-direction: column
+      // justify-content: center
+      align-items: flex-start
+      h3
+        font-size: 18px
+        font-family: 'Montserrat', sans-serif
+        margin-top: 15px
+        font-weight: bold
+      p
+        font-size: 16px
+        font-family: 'Montserrat', sans-serif
+      a
+        font-family: 'Montserrat', sans-serif
+        text-decoration: none
+        color: $gitwit-green
+        transition: ease-in-out .25s
+        &:hover
+          color: black
+
+
+
+
+
+
+//Contact Page Styles
+.contact-section
+
+  .contacts-row
+    img
+      padding: 0
+      width: 20%
+      margin: 0
